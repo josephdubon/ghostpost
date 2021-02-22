@@ -6,7 +6,7 @@ from ghostpost_app.forms import CreatePostForm
 
 def index_view(request):
     name = 'Ghost Post'
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('-created_at')
     return render(request, 'home.html', {'app_name': name, 'posts': posts})
 
 
