@@ -54,3 +54,9 @@ def create_post(request):
         'generic_form.html',
         context
     )
+
+
+def delete_post(request, post_id=None):
+    post_to_delete = Post.objects.filter(id=post_id).first()
+    post_to_delete.delete()
+    return redirect('/')
