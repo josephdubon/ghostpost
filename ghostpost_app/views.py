@@ -10,22 +10,22 @@ def index_view(request):
     return render(request, 'home.html', {'app_name': name, 'posts': posts})
 
 
-def like_view(request, post_id):
+def boast_view(request, post_id):
     # get post
     post = Post.objects.filter(id=post_id).first()
     # add like
-    post.likes += 1
+    post.boast += 1
     # must run .save() to save to database
     post.save()
     # redirect home for good ux
     return redirect('/')
 
 
-def dislike_view(request, post_id):
+def roast_view(request, post_id):
     # get post
     post = Post.objects.filter(id=post_id).first()
     # add dislike
-    post.dislikes += 1
+    post.roast += 1
     # must run .save() to save to database
     post.save()
     # redirect home for good ux
@@ -41,8 +41,8 @@ def create_post(request):
             data = form.cleaned_data
             Post.objects.create(
                 text=data['text'],
-                likes=data['likes'],
-                dislikes=data['dislikes'],
+                boast=data['boast'],
+                roast=data['roast'],
                 created_at=timezone.now,
             )
             return redirect('/')
