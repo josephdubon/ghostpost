@@ -1,31 +1,21 @@
 <h1>{{ app_name }}</h1>
-<br/>
-<br/>
-<h2></h2>
+<h2>Boast or Roast</h2>
 {% for post in posts %}
-    <ul>
-        {# data start here #}
-        <li>
-            {{ post.text }}
-        </li>
-        <li>
-            {{ post.boast }}
-        </li>
-        <li>
-            {{ post.roast }}
-        </li>
-        <li>
-            {{ post.created_at }}
-        </li>
-        {# buttons start here #}
-        <li>
-            <a href='/boast/{{ post_id }}'>Boast</a>
-        </li>
-        <li>
-            <a href='/roast/{{ post_id }}'>Roast</a>
-        </li>
-    </ul>
+    <hr>
+    {# data start here #}
+    <h3>{{ post.text }}</h3>
+    <p>
+        boasts: <strong>{{ post.boast }}</strong>
+
+        roasts: <strong>{{ post.roast }}</strong>
+    </p>
+    {# buttons start here #}
+    <a href='/boast/{{ post.post_id }}'>Boast</a> or
+    <a href='/roast/{{ post.post_id }}'>Roast</a>
 {% endfor %}
 <br>
 <br>
 | <a href='/'>Home</a> | <a href='/create_post/'>Create Post</a> |
+<br>
+<br>
+<hr>
