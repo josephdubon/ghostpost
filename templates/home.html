@@ -13,6 +13,11 @@
     {# buttons start here #}
     <a href='/boasts/{{ post.id }}'>Boast</a> or
     <a href='/roasts/{{ post.id }}'>Roast</a>
+    <br/>
+    <br/>
+    <small>
+    <a href="{% url 'delete_post' post.id %}">Delete Post</a>
+    </small>
 {% endfor %}
 <br>
 <br>
