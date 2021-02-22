@@ -3,6 +3,13 @@
 {% for post in posts %}
     <hr>
     {# data start here #}
+    {% if post.is_roast == True %}
+        <h2>ROAST</h2>
+    {% endif %}
+    {% if post.is_roast == False %}
+        <h2>BOAST</h2>
+    {% endif %}
+
     <h3>{{ post.text }}</h3>
     <small>{{ post.created_at }}</small>
     <p>
@@ -16,7 +23,7 @@
     <br/>
     <br/>
     <small>
-    <a href="{% url 'delete_post' post.id %}">DELETE POST</a>
+        <a href="{% url 'delete_post' post.id %}">DELETE POST</a>
     </small>
 {% endfor %}
 <br>
