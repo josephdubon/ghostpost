@@ -4,18 +4,18 @@
     <hr>
     {# data start here #}
     <h3>{{ post.text }}</h3>
+    <small>{{ post.created_at }}</small>
     <p>
         boasts: <strong>{{ post.boast }}</strong>
 
         roasts: <strong>{{ post.roast }}</strong>
     </p>
     {# buttons start here #}
-    <a href='/boast/{{ post.post_id }}'>Boast</a> or
-    <a href='/roast/{{ post.post_id }}'>Roast</a>
+    <a href='/boast/{{ post_id }}'>Boast</a> or
+    <a href='/roast/{{ post_id }}'>Roast</a>
 {% endfor %}
 <br>
 <br>
+<hr>
 | <a href='/'>Home</a> | <a href='/create_post/'>Create Post</a> |
-<br>
-<br>
 <hr>
