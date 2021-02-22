@@ -14,7 +14,7 @@ def boast_view(request, post_id):
     # get post
     post = Post.objects.filter(id=post_id).first()
     # add like
-    post.boast += 1
+    post.boasts += 1
     # must run .save() to save to database
     post.save()
     # redirect home for good ux
@@ -41,7 +41,7 @@ def create_post(request):
             data = form.cleaned_data
             Post.objects.create(
                 text=data['text'],
-                boast=data['boast'],
+                boast=data['boasts'],
                 roast=data['roast'],
                 created_at=timezone.now,
             )

@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.RenameField(
             model_name='post',
             old_name='boasts',
-            new_name='boast',
+            new_name='boasts',
         ),
         migrations.RenameField(
             model_name='post',
