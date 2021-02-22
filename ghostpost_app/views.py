@@ -40,6 +40,7 @@ def create_post(request):
         if form.is_valid():
             data = form.cleaned_data
             Post.objects.create(
+                text=data['text'],
                 likes=data['likes'],
                 dislikes=data['dislikes'],
                 created_at=timezone.now,
