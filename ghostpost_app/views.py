@@ -42,8 +42,6 @@ def create_post(request):
             Post.objects.create(
                 text=data['text'],
                 is_roast=data['is_roast'],
-                boasts=data['boasts'],
-                roasts=data['roasts'],
                 created_at=timezone.now,
             )
             return redirect('/')
