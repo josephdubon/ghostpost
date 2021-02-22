@@ -1,7 +1,16 @@
 from django.db import models
 
 
+#
+#     Boolean to tell whether it's a boast or a roast
+#     CharField to put the content of the post in
+#     IntegerField for up votes
+#     IntegerField for down votes
+#     DateTimeField for submission time
+#
+
 class Post(models.Model):
+    roast_or_boast = models.BooleanField(default=False)
     text = models.CharField(max_length=100)
     # good practice to start with default=0 for IntegerField()
     boasts = models.IntegerField(default=0)
