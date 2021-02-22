@@ -1,6 +1,7 @@
 <h1>{{ app_name }}</h1>
 {% for post in posts %}
     <ul>
+        {# data start here #}
         <li>
             {{ post.text }}
         </li>
@@ -22,3 +23,6 @@
         </li>
     </ul>
 {% endfor %}
+<br>
+<br>
+| <a href='/'>Home</a> | <a href='/create_post/'>Create Post</a> |
