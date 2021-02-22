@@ -10,9 +10,8 @@ from django.db import models
 #
 
 class Post(models.Model):
-    roast_or_boast = models.BooleanField(default=False)
     text = models.CharField(max_length=100)
-    # good practice to start with default=0 for IntegerField()
+    is_roast = models.BooleanField(default=False)
     boasts = models.IntegerField(default=0)
     roasts = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
