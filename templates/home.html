@@ -6,13 +6,13 @@
     <h3>{{ post.text }}</h3>
     <small>{{ post.created_at }}</small>
     <p>
-        boasts: <strong>{{ post.boast }}</strong>
+        boasts: <strong>{{ post.boasts }}</strong>
 
         roasts: <strong>{{ post.roast }}</strong>
     </p>
     {# buttons start here #}
-    <a href='/boast/{{ post.id }}'>Boast</a> or
-    <a href='/roast/{{ post.id }}'>Roast</a>
+    <a href='/boasts/{{ post.id }}'>Boast</a> or
+    <a href='/roasts/{{ post.id }}'>Roast</a>
 {% endfor %}
 <br>
 <br>

@@ -25,7 +25,7 @@ def roast_view(request, post_id):
     # get post
     post = Post.objects.filter(id=post_id).first()
     # add dislike
-    post.roast += 1
+    post.roasts += 1
     # must run .save() to save to database
     post.save()
     # redirect home for good ux
@@ -41,8 +41,8 @@ def create_post(request):
             data = form.cleaned_data
             Post.objects.create(
                 text=data['text'],
-                boast=data['boasts'],
-                roast=data['roast'],
+                boasts=data['boasts'],
+                roasts=data['roasts'],
                 created_at=timezone.now,
             )
             return redirect('/')
