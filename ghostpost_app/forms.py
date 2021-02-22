@@ -3,8 +3,8 @@ from django import forms
 
 class CreatePostForm(forms.Form):
     GHOSTPOST_CHOICES = (
-        ('1', 'boasts'),
-        ('2', 'roasts')
+        ('False', 'Boasts'),
+        ('True', 'Roasts')
     )
 
     text = forms.CharField(max_length=100)
