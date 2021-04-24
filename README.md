@@ -4,7 +4,7 @@ The GhostPost Machine™ is a website where people can anonymously post Boasts o
 services, there is a character limit: 280 characters. We are deliberately not dealing with logins, as that is outside
 the scope of the project (and beyond our time constraints).
 
-#### Features
+## Features
 
 Back end:
 
@@ -22,3 +22,6 @@ Front end:
 * Upvote and downvote buttons for each boast and roast
     * when clicked, these buttons affect the numbers on the relevant post appropriately
 * Page to submit a boast or a roast
+
+### URL
+https://josephdubon.github.io/ghostpost/
